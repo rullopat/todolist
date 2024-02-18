@@ -1,0 +1,14 @@
+<div>
+    <h1 class="font-bold text-4xl">Create new Task in: <%= @list.name %></h1>
+
+    <%= form_with(model: [@list, @task]) do |form| %>
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+        <%= form.submit "Create Task", class: "btn-primary" %>
+    <% end %>
+
+    <%= link_to "Back to list tasks", @list %>
+
+</div>

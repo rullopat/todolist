@@ -1,0 +1,11 @@
+<div>
+  <h1 class="page-title">Todo lists</h1>
+
+  <ul class="p-1 my-2">
+  <% @lists.each do |list| %>
+    <li class="p-1 m-1 text-black bg-gray-300 hover:bg-orange-300 hover:underline rounded"><%= link_to list.name, list %></li>
+  <% end %>
+  </ul>
+
+  <%= link_to "New list", new_list_path, class: "btn-primary" %>
+</div>
